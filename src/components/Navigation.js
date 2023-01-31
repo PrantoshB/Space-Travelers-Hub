@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import logo from '../assets/planet.png';
 import './Navigation.css';
 import NavItem from './NavItem';
@@ -21,7 +20,7 @@ const routes = [
     route: 'profile',
     text: 'my profile',
   },
-]
+];
 
 const Navigation = () => (
   <nav className="navigation">
@@ -32,7 +31,7 @@ const Navigation = () => (
     <ul className="nav-list">
       {
         routes.map((route) => (
-          <li className="list-item">
+          <li key={route.route} className="list-item">
             <NavItem route={route.route} text={route.text} />
           </li>
         ))
