@@ -12,6 +12,12 @@ const Navigation = () => (
     <ul>
       <li>
         <NavLink
+          to="/rockets"
+          className={({ isActive }) => (isActive ? 'active' : 'link')}
+        >
+          Rockets
+        </NavLink>
+        <NavLink
           to="/profile"
           className={({ isActive }) => (isActive ? 'active' : 'link')}
         >
