@@ -9,14 +9,32 @@ const Navigation = () => (
       <img className="logo" src={logo} alt="a planet" />
       <span> Space Travelers&apos; Hub</span>
     </div>
-    <ul>
-      <li>
-        <NavLink
+    <ul className="nav-list">
+      <li className="list-item">
+      <NavLink
           to="/rockets"
           className={({ isActive }) => (isActive ? 'active' : 'link')}
         >
           Rockets
         </NavLink>
+      </li>
+      <li className="list-item">
+      <NavLink
+          to="/missions"
+          className={({ isActive }) => (isActive ? 'active' : 'link')}
+        >
+          Missions
+        </NavLink>
+      </li>
+      <li className="list-item">
+      <NavLink
+          to="/dragons"
+          className={({ isActive }) => (isActive ? 'active' : 'link')}
+        >
+          Dragons
+        </NavLink>
+      </li>
+      <li className="list-item">
         <NavLink
           to="/profile"
           className={({ isActive }) => (isActive ? 'active' : 'link')}
