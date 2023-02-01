@@ -1,7 +1,8 @@
 import React from 'react';
+import MissionsTable from '../components/Missions';
 
 const Missions = () => (
-  <div>Missions</div>
+  <MissionsTable />
 );
 
 export default Missions;
