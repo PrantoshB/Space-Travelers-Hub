@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const NavItem = ({ route, text }) => (
   <NavLink
-    to={`/${route}`}
+    to={`${route}`}
     className={({ isActive }) => (isActive ? 'active' : 'link')}
   >
     {text}
