@@ -6,10 +6,14 @@ import './Rockets.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  const rockets = useSelector((state) => state.rockets);
+  const data = useSelector((state) => state.rockets);
+  const { status, rockets } = data;
+
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (status === 'idle') {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, status]);
   return (
     <div className="rockets-wrapper">
       {rockets.map((rocket) => (
