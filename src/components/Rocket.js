@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
+import './Rocket.css';
 
 const Rocket = ({ title, description, image }) => (
-  <div>
+  <div className="rocket">
     <img src={image} alt={title} />
-    <h3>{title}</h3>
-    <p>{description}</p>
+    <div className="title-desc">
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
   </div>
 );
 

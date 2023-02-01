@@ -1,0 +1,9 @@
+.rocket {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2%;
+}
+
+.rocket img {
+  width: 20%;
+}
