@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissionsAsync } from '../../redux/missions/missions';
+import { getMissionsAsync, joinMission } from '../../redux/missions/missions';
 import Badge from '../Badge';
 import './style.css';
 
@@ -15,6 +15,10 @@ const MissionsTable = () => {
     }
   }, [dispatch, status]);
 
+  const handleClick = (mission) => {
+    dispatch(joinMission(mission));
+  };
+
   return (
     <table cellSpacing="0">
       <thead>
@@ -28,14 +32,27 @@ const MissionsTable = () => {
       <tbody>
         {
           missions.map((mission) => {
-            const { id, name, description } = mission;
+            const {
+              id, name, description, isReserved,
+            } = mission;
             return (
               <tr key={id}>
                 <td>{name}</td>
                 <td>{description}</td>
-                <td><Badge text="Not a member" /></td>
                 <td>
-                  <button type="button">Join Mission</button>
+                  <Badge
+                    text={isReserved ? 'Active member' : 'Not a member'}
+                    active={isReserved}
+                  />
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    className={`${isReserved && 'btn-active'}`}
+                    onClick={() => handleClick(mission)}
+                  >
+                    {isReserved ? 'Leave Mission' : 'Join Mission'}
+                  </button>
                 </td>
               </tr>
             );
