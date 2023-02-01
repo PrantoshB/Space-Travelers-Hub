@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path="/rockets" element={<Rockets />} />
+          <Route path="/" element={<Rockets />} />
           <Route path="/missions" element={<Missions />} />
           <Route path="/dragons" element={<Dragons />} />
           <Route path="/profile" element={<Profile />} />
