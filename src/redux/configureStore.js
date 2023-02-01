@@ -5,7 +5,7 @@ import rocketReducer from './rockets/rocket';
 const store = configureStore(
   {
     reducer: {
-      rocekts: rocketReducer,
+      rocket: rocketReducer,
     },
   },
   applyMiddleware((thunk)),
