@@ -31,4 +31,10 @@ button {
   padding: 0.4em;
   text-transform: capitalize;
   cursor: pointer;
+  width: 100px;
+}
+
+.btn-active {
+  color: #f83f3f;
+  border-color: #f83f3f;
 }
