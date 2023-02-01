@@ -5,19 +5,19 @@ import NavItem from './NavItem';
 
 const routes = [
   {
-    route: 'rockets',
+    route: '/',
     text: 'rockets',
   },
   {
-    route: 'missions',
+    route: '/missions',
     text: 'missions',
   },
   {
-    route: 'dragons',
+    route: '/dragons',
     text: 'dragons',
   },
   {
-    route: 'profile',
+    route: '/profile',
     text: 'my profile',
   },
 ];
