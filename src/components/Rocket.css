@@ -7,3 +7,31 @@
 .rocket img {
   width: 20%;
 }
+
+#reserved {
+  background: rgb(29, 165, 255);
+  padding: 0.15rem 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  color: white;
+}
+
+#reserve {
+  background: rgb(0, 106, 255);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.title-desc h3 {
+  margin: 0 0 0.7rem 0;
+}
+
+.title-desc p {
+  margin: 0 0 1rem 0;
+  line-height: 1.5rem;
+}

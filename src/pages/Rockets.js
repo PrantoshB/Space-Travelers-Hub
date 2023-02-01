@@ -18,6 +18,9 @@ const Rockets = () => {
           key={rocket.id}
           title={rocket.name}
           description={rocket.description}
+          id={rocket.id}
+          reservedtext={rocket.reserved ? 'Reserved' : ''}
+          reserved={rocket.reserved}
         />
       ))}
     </div>
