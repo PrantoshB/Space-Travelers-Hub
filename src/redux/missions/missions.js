@@ -24,7 +24,7 @@ const missionsReducer = (state = initialState, action) => {
         if (item.id !== action.payload.id) {
           return item;
         }
-        return { ...item, isReserved: !item.isReserved }
+        return { ...item, isReserved: !item.isReserved };
       });
 
       return {
