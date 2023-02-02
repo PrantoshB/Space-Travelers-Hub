@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import './style.css';
+import { reserveDragon } from '../../redux/dragons/dragons';
 
 const Dragon = ({
   id, title, type, image, reserved, reservedtext,
 }) => {
-  const reserveHandler = () => {};
+  const dispatch = useDispatch();
+  const reserveHandler = () => {
+    dispatch(reserveDragon(id));
+  };
 
   return (
     <div className="dragon" id={id}>
