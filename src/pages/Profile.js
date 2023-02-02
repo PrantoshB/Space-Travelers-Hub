@@ -11,7 +11,7 @@ const Profile = () => {
   const missionsData = useSelector((state) => state.missions);
 
   const { status, rockets } = data;
-  const {missionsStatus, missions} = missionsData;
+  const { missionsStatus, missions } = missionsData;
 
   useEffect(() => {
     if (status === 'idle') {
@@ -25,7 +25,6 @@ const Profile = () => {
       dispatch(getMissionsAsync());
     }
   }, [dispatch, missionsStatus]);
-
 
   return (
     <div className="profile-container">
