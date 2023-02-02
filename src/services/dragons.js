@@ -9,14 +9,13 @@ const getAllDragons = async () => {
     if (!dragons) {
       throw new Error('No data found :(');
     } else {
-      payload = dragons.map((dragon) => (
-        {
-          id: dragon.id,
-          name: dragon.name,
-          type: dragon.type,
-          image: dragon.flickr_images[0],
-        }
-      ));
+      payload = dragons.map((dragon) => ({
+        id: dragon.id,
+        name: dragon.name,
+        type: dragon.type,
+        image: dragon.flickr_images[0],
+        reserved: false,
+      }));
     }
   } catch (error) {
     return error;
