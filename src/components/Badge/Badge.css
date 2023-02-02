@@ -1,0 +1,12 @@
+.badge {
+  background-color: #878787;
+  border-radius: 3px;
+  padding: 0.15em 0.45em;
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.badge-active {
+  background-color: #4da0ff;
+}
