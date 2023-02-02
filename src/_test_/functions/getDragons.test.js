@@ -1,6 +1,6 @@
 import dragonsService from "../../services/dragons";
 
-describe('Get Rockets', () => {
+describe('Get Dragons', () => {
     test('gets the correct data', async () => {
         const data = await dragonsService.getAllDragons();
         expect(data).toBeInstanceOf(Array);
