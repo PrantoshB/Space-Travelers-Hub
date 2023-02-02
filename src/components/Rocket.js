@@ -9,6 +9,7 @@ const Rocket = ({
   const dispatch = useDispatch();
   const reserveHandler = () => {
     dispatch(reserveRocket(id));
+    console.log(id);
   };
   return (
     <div className="rocket">
