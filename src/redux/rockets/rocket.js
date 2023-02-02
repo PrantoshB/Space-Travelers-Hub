@@ -18,6 +18,7 @@ export const fetchRockets = createAsyncThunk(
     });
   },
 );
+
 export const reserveRocket = (id) => (dispatch, getState) => {
   const state = getState().rockets.rockets;
   const newState = state.map((rocket) => {
